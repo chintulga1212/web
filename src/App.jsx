@@ -213,19 +213,15 @@ const ITEMS = {
 
 function HomePage() {
   const [activeTab, setActiveTab] = useState("bundles");
-  const [quantityByTab, setQuantityByTab] = useState({
-    bundles: "",
-    sets: "",
-    ascension: "",
-    clan: "",
-  });
+  const [quantityByTab, setQuantityByTab] = useState(() =>
+    Object.fromEntries(TABS.map((tab) => [tab.id, ""])),
+  );
 
-  const [selectedByTab, setSelectedByTab] = useState(() => ({
-    bundles: ITEMS.bundles[0]?.id || "",
-    sets: ITEMS.sets[0]?.id || "",
-    ascension: ITEMS.ascension[0]?.id || "",
-    clan: ITEMS.clan[0]?.id || "",
-  }));
+  const [selectedByTab, setSelectedByTab] = useState(() =>
+    Object.fromEntries(
+      TABS.map((tab) => [tab.id, ITEMS[tab.id]?.[0]?.id || ""]),
+    ),
+  );
 
   const currentItems = useMemo(() => ITEMS[activeTab] || [], [activeTab]);
   const selectedId = selectedByTab[activeTab] || currentItems[0]?.id;
