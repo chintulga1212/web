@@ -1,0 +1,42 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b0f1c" />
+      <stop offset="0.55" stop-color="#1a1d2b" />
+      <stop offset="1" stop-color="#0c0f18" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6cf6d0" />
+      <stop offset="1" stop-color="#f0a83b" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="28" fill="url(#bg)" />
+  <circle cx="260" cy="200" r="160" fill="#2d3a56" opacity="0.35" />
+  <circle cx="960" cy="140" r="220" fill="#412b2b" opacity="0.3" />
+  <circle cx="860" cy="520" r="260" fill="#1b304b" opacity="0.4" />
+  <path
+    d="M248 512L416 276L612 496L764 348L952 512"
+    stroke="url(#glow)"
+    stroke-width="6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.8"
+  />
+  <rect x="88" y="84" width="260" height="36" rx="18" fill="url(#glow)" opacity="0.9" />
+  <rect x="88" y="140" width="180" height="20" rx="10" fill="#9fc4ff" opacity="0.5" />
+  <rect x="84" y="584" width="340" height="26" rx="13" fill="#f0a83b" opacity="0.35" />
+  <g opacity="0.8">
+    <path d="M776 216L1040 144" stroke="#7ae8ff" stroke-width="3" />
+    <path d="M792 256L1080 212" stroke="#7ae8ff" stroke-width="2" />
+  </g>
+  <g>
+    <path d="M484 178C520 122 602 106 664 132C728 160 770 228 752 296C734 366 644 408 564 382C486 356 448 274 484 178Z" fill="#101726" stroke="#6cf6d0" stroke-width="3" />
+    <path d="M520 260L612 206L692 246L640 320Z" fill="#6cf6d0" opacity="0.35" />
+  </g>
+  <text x="90" y="510" fill="#f4f7ff" font-family="Arial, sans-serif" font-size="54" font-weight="700">
+    SAILOR PIECE
+  </text>
+  <text x="92" y="560" fill="#9aa6bf" font-family="Arial, sans-serif" font-size="22">
+    Legendary raid drops • XP boosts • Premium sets
+  </text>
+</svg>
