@@ -31,12 +31,21 @@ const server = createServer((req, res) => {
 
   const requestedPath = normalize(pathname).replace(/^(\.\.[/\\])+/, "");
   let filePath = join(distDir, requestedPath === "/" ? "index.html" : requestedPath);
+  const hasExtension = extname(requestedPath).length > 0;
 
   if (existsSync(filePath) && statSync(filePath).isDirectory()) {
     filePath = join(filePath, "index.html");
   }
 
   if (!existsSync(filePath) || !statSync(filePath).isFile()) {
+    if (hasExtension) {
+      res.writeHead(404, {
+        "Content-Type": "text/plain; charset=utf-8",
+      });
+      res.end("Not found");
+      return;
+    }
+
     filePath = join(distDir, "index.html");
   }
 
